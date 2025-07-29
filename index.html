@@ -215,6 +215,30 @@
             margin: 0 1rem;
             text-decoration: none;
         }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            flex-wrap: nowrap;
+            /* Wichtig: verhindert Zeilenumbruch */
+        }
+
+        .card-header h3 {
+            margin: 0;
+            flex-grow: 1;
+            /* <<< Wichtig: lässt Platz für Datum */
+            margin-right: 1rem;
+            /* optional für Abstand zum Datum */
+        }
+
+        .card-header .date {
+            white-space: nowrap;
+            color: #666;
+            font-size: 0.95rem;
+            padding-top: 0.25rem;
+        }
     </style>
 </head>
 
@@ -234,12 +258,10 @@
         <section class="header">
             <div class="intro">
                 <h1>Marius <span>Graml</span></h1>
-                <h3>Machine Learning Researcher & Engineer</h3>
-                <p>Exploring novel ML architectures & global research in robotics, optics, and signal processing.</p>
+                <h3>Master Student focussing on Machine Learning and Deep Learning Research</h3>
                 <div class="tags">
-                    <span class="tag">Graph Neural Networks</span>
+                    <span class="tag">Machine Learning</span>
                     <span class="tag">Deep Learning</span>
-                    <span class="tag">Global Research</span>
                     <span class="tag">TUM</span>
                 </div>
                 <div class="buttons">
@@ -264,10 +286,12 @@
         <section class="section" id="education">
             <h2>Education</h2>
             <div class="card">
-                <h3>Robotics, Cognition, Intelligence (M.Sc.)</h3>
+                <div class="card-header">
+                    <h3>Robotics, Cognition, Intelligence (M.Sc.)</h3>
+                    <span class="date">(10/2023–present)</span>
+                </div>
                 <p>Technical University of Munich</p>
                 <p>Konrad Adenauer Scholarship</p>
-                <p>(10/2023–present)</p>
             </div>
             <div class="card">
                 <h3>Seoul National University (Semester Abroad)</h3>

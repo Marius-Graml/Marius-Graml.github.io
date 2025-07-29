@@ -1,0 +1,210 @@
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fb;
+        color: #333;
+        padding: 0;
+    }
+
+    nav {
+        background: #fff;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav .logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: #fff;
+        background: #007bff;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .intro {
+        max-width: 60%;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .intro h1 span {
+        color: #007bff;
+    }
+
+    .intro p {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .tags {
+        margin: 1rem 0;
+    }
+
+    .tag {
+        display: inline-block;
+        background-color: #e6e9f0;
+        border-radius: 20px;
+        padding: 0.3rem 1rem;
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .buttons a {
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        margin-right: 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .buttons .primary {
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+        color: white;
+    }
+
+    .buttons .secondary {
+        border: 2px solid #007bff;
+        color: #007bff;
+        background-color: white;
+    }
+
+    .profile-img img {
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .section {
+        margin-top: 4rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 3px solid #00c6ff;
+        display: inline-block;
+    }
+
+    .card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .contact-section {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1;
+        background: #fff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-info p {
+        margin: 1rem 0;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: inherit;
+    }
+
+    .send-btn {
+        background: linear-gradient(90deg, #007bff, #00c6ff);
+        color: #fff;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    footer {
+        background: #1e293b;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+        border-top: 1px solid #ccc;
+    }
+
+    footer a {
+        color: #fff;
+        margin: 0 1rem;
+        text-decoration: none;
+    }
+</style>
