@@ -239,6 +239,58 @@
             font-size: 0.95rem;
             padding-top: 0.25rem;
         }
+
+        .redesigned-card {
+            background-color: #f9fafc;
+            border-left: 4px solid #007bff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .redesigned-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 123, 255, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            flex-wrap: nowrap;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            flex-grow: 1;
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .card-header .date {
+            white-space: nowrap;
+            color: #666;
+            font-style: italic;
+            font-family: Georgia, serif;
+            font-size: 0.95rem;
+        }
+
+        .institution {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .details {
+            color: #555;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 
@@ -258,7 +310,7 @@
         <section class="header">
             <div class="intro">
                 <h1>Marius <span>Graml</span></h1>
-                <h3>Master Student focussing on Machine Learning and Deep Learning Research</h3>
+                <h3>Master Student with focus on Machine Learning and Deep Learning Research</h3>
                 <div class="tags">
                     <span class="tag">Machine Learning</span>
                     <span class="tag">Deep Learning</span>
@@ -276,7 +328,7 @@
 
         <section class="section" id="about">
             <h2>About Me</h2>
-            <p>I am a research-driven Master's student in <strong>Robotics, Cognition, and Intelligence</strong> at TUM
+            <p>I am a research-driven Master's student in <strong>Robotics, Cognition, Intelligence</strong> at TUM
                 with a strong background in machine learning and signal processing. My academic path spans
                 <strong>Spain, Australia, and South Korea</strong>—fostering global scientific maturity. I specialize in
                 <strong>Graph Neural Networks</strong> and their application in robotics and optical sensing systems.
@@ -285,26 +337,41 @@
 
         <section class="section" id="education">
             <h2>Education</h2>
-            <div class="card">
+
+            <div class="card redesigned-card">
                 <div class="card-header">
                     <h3>Robotics, Cognition, Intelligence (M.Sc.)</h3>
-                    <span class="date">(10/2023–present)</span>
+                    <span class="date">📅 10/2023–present</span>
                 </div>
-                <p>Technical University of Munich</p>
-                <p>Konrad Adenauer Scholarship</p>
+                <p class="institution">Technical University of Munich</p>
+                <p class="details">Konrad Adenauer Scholarship</p>
             </div>
-            <div class="card">
-                <h3>Seoul National University (Semester Abroad)</h3>
-                <<p>(03/2025 – 07/2025)</p>>
+
+            <div class="card redesigned-card">
+                <div class="card-header">
+                    <h3>Seoul National University (Semester Abroad)</h3>
+                    <span class="date">📅 03/2025–07/2025</span>
+                </div>
+                <p class="institution">South Korea</p>
+                <p class="details">Exchange Semester</p>
             </div>
-            <div class="card">
-                <h3>Australian National University (Year Abroad)</h3>
-                <p>Bachelor’s Thesis on Metasurface Dispersion Spectroscopy (09/2022 – 08/2023)</p>
+
+            <div class="card redesigned-card">
+                <div class="card-header">
+                    <h3>Australian National University (Year Abroad)</h3>
+                    <span class="date">📅 09/2022–08/2023</span>
+                </div>
+                <p class="institution">Bachelor’s Thesis</p>
+                <p class="details">Metasurface Dispersion Spectroscopy</p>
             </div>
-            <div class="card">
-                <h3>Electrical Engineering and Information Technology (B.Eng.)</h3>
-                <p>Regensburg University of Applied Sciences</p>
-                <p>DAAD RISE, PROMOS, Josef-Stanglmeier-Prize</p>
+
+            <div class="card redesigned-card">
+                <div class="card-header">
+                    <h3>Electrical Engineering and Information Technology (B.Eng.)</h3>
+                    <span class="date">📅 2018–2022</span>
+                </div>
+                <p class="institution">Regensburg University of Applied Sciences</p>
+                <p class="details">DAAD RISE, PROMOS, Josef-Stanglmeier-Prize</p>
             </div>
         </section>
 
