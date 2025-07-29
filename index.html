@@ -58,10 +58,10 @@
         }
 
         .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
+            width: 100%;
+            padding: 2rem 4vw;
         }
+
 
         .header {
             display: flex;
@@ -291,6 +291,35 @@
             color: #555;
             font-size: 0.95rem;
         }
+
+        .card-header-with-logo {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .uni-logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .date-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .uni-logo-inline {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            opacity: 0.9;
+        }
     </style>
 </head>
 
@@ -341,7 +370,10 @@
             <div class="card redesigned-card">
                 <div class="card-header">
                     <h3>Robotics, Cognition, Intelligence (M.Sc.)</h3>
-                    <span class="date">📅 10/2023–present</span>
+                    <div class="date-logo">
+                        <span class="date">📅 10/2023–present</span>
+                        <img src="https://i.postimg.cc/y8K57vJR/logo-tum.png" alt="TUM Logo" class="uni-logo-inline">
+                    </div>
                 </div>
                 <p class="institution">Technical University of Munich</p>
                 <p class="details">Konrad Adenauer Scholarship</p>
@@ -350,7 +382,10 @@
             <div class="card redesigned-card">
                 <div class="card-header">
                     <h3>Seoul National University (Semester Abroad)</h3>
-                    <span class="date">📅 03/2025–07/2025</span>
+                    <div class="date-logo">
+                        <span class="date">📅 03/2025–07/2025</span>
+                        <img src="https://i.postimg.cc/G3sSYZGY/snu-logo.png" alt="SNU Logo" class="uni-logo-inline">
+                    </div>
                 </div>
                 <p class="institution">South Korea</p>
                 <p class="details">Exchange Semester</p>
@@ -359,7 +394,10 @@
             <div class="card redesigned-card">
                 <div class="card-header">
                     <h3>Australian National University (Year Abroad)</h3>
-                    <span class="date">📅 09/2022–08/2023</span>
+                    <div class="date-logo">
+                        <span class="date">📅 09/2022–08/2023</span>
+                        <img src="https://i.postimg.cc/3Rtf1T9C/anu-logo.webp" alt="ANU Logo" class="uni-logo-inline">
+                    </div>
                 </div>
                 <p class="institution">Bachelor’s Thesis</p>
                 <p class="details">Metasurface Dispersion Spectroscopy</p>
@@ -368,12 +406,16 @@
             <div class="card redesigned-card">
                 <div class="card-header">
                     <h3>Electrical Engineering and Information Technology (B.Eng.)</h3>
-                    <span class="date">📅 2018–2022</span>
+                    <div class="date-logo">
+                        <span class="date">📅 2018–2022</span>
+                        <img src="https://i.postimg.cc/tRf24DcT/oth-logo.png" alt="OTH Logo" class="uni-logo-inline">
+                    </div>
                 </div>
                 <p class="institution">Regensburg University of Applied Sciences</p>
                 <p class="details">DAAD RISE, PROMOS, Josef-Stanglmeier-Prize</p>
             </div>
         </section>
+
 
         <section class="section" id="projects">
             <h2>Projects</h2>
