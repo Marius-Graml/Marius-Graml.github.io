@@ -1,81 +1,141 @@
 <section class="section" id="education">
-    <h2>Education</h2>
+    <h2>Professional Journey</h2>
 
-    <div class="card expandable-card">
-        <div class="card-row">
-            <div class="card-content">
-                <div class="card-title-row">
-                    <h3>Technical University of Munich</h3>
-                    <span class="date">📅 10/2023–present</span>
-                </div>
-                <p class="institution"><i>Robotics, Cognition, Intelligence (M.Sc.)</i></p>
-                <div class="more-info">
-                    <p class="expand-details">Focus: Machine Learning and Deep Learning</p>
-                </div>
-            </div>
-            <div class="card-logo">
-                <img src="https://i.postimg.cc/y8K57vJR/logo-tum.png" alt="TUM Logo">
-            </div>
-        </div>
+    <div class="timeline-filters">
+        <button class="filter-btn active" data-filter="education">🎓 Education</button>
+        <button class="filter-btn" data-filter="experience">💼 Work</button>
     </div>
 
-    <div class="card redesigned-card">
-        <div class="card-row">
-            <div class="card-content">
-                <div class="card-title-row">
-                    <h3>Seoul National University</h3>
-                    <span class="date">📅 03/2025–07/2025</span>
+    <div class="timeline-wrapper">
+        <div class="timeline">
+            <!-- Education Items -->
+            <!-- OTH Regensburg -->
+            <div class="timeline-item" data-type="education">
+                <span class="timeline-date">10/2018 – 09/2022</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/Rh3DCTLy/oth-logo3.png" alt="OTH Logo">
+                    <h3>OTH Regensburg</h3>
+                    <p>Electrical Engineering (B.Eng.)<br><i>Signal Processing Focus</i></p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
                 </div>
-                <p class="details"><i>Exchange Semester</i></p>
             </div>
-            <div class="card-logo">
-                <img src="https://i.postimg.cc/G3sSYZGY/snu-logo.png" alt="SNU Logo">
-            </div>
-        </div>
-    </div>
 
-    <div class="card expandable-card">
-        <div class="card-row">
-            <div class="card-content">
-                <div class="card-title-row">
-                    <h3>Australian National University</h3>
-                    <span class="date">📅 09/2022–08/2023</span>
-                </div>
-                <p class="details"><i>Year Abroad</i></p>
-                <div class="more-info">
-                    <p class="expand-details"><u>Internship</u></p>
-                    <ul class="card-list">
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <p class="expand-details"><u>Bachelor’s Thesis</u></p>
-                    <ul class="card-list">
-                        <li></li>
-                        <li></li>
-                    </ul>
+            <!-- ANU -->
+            <div class="timeline-item" data-type="education">
+                <span class="timeline-date">09/2022 – 08/2023</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/Hk7dvwGS/anu-logo2.png" alt="ANU Logo">
+                    <h3>ANU</h3>
+                    <p>Internship & Bachelor’s Thesis<br><i>Metasurface Spectroscopy</i></p>
+                    <div class="more-info">
+                        <p><u>Internship</u></p>
+                        <ul class="card-list">
+                            <li>Developed optical sensing software</li>
+                        </ul>
+                        <p><u>Bachelor’s Thesis</u></p>
+                        <ul class="card-list">
+                            <li>Metasurface design and simulation</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card-logo">
-                <img src="https://i.postimg.cc/Hk7dvwGS/anu-logo2.png" alt="ANU Logo">
-            </div>
-        </div>
-    </div>
 
-    <div class="card expandable-card">
-        <div class="card-row">
-            <div class="card-content">
-                <div class="card-title-row">
-                    <h3>Regensburg University of Applied Sciences</h3>
-                    <span class="date">📅 10/2018–09/2022</span>
-                </div>
-                <p class="institution"><i>Electrical Engineering and Information Technology (B.Eng.)</i></p>
-                <div class="more-info">
-                    <p class="expand-details">Focus: Signal Processing and Information Theory</p>
+            <!-- SNU -->
+            <div class="timeline-item" data-type="education">
+                <span class="timeline-date">03/2025 – 07/2025</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/G3sSYZGY/snu-logo.png" alt="SNU">
+                    <h3>SNU</h3>
+                    <p>Exchange Semester</p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
                 </div>
             </div>
-            <div class="card-logo">
-                <img src="https://i.postimg.cc/Rh3DCTLy/oth-logo3.png" alt="OTH Logo">
+
+            <!-- TUM -->
+            <div class="timeline-item" data-type="education">
+                <span class="timeline-date">10/2023 – present</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/y8K57vJR/logo-tum.png" alt="TUM">
+                    <h3>TUM</h3>
+                    <p>Robotics, Cognition, Intelligence (M.Sc.)<br><i>Focus: ML & DL</i></p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Placeholder -->
+            <div class="timeline-item" data-type="education">
+                <span class="timeline-date">Future</span>
+                <div class="timeline-dot placeholder-dot"></div>
+                <div class="edu-card placeholder-card">
+                    <div class="placeholder-icon">+</div>
+                    <h3>Coming Soon</h3>
+                </div>
+            </div>
+
+            <!-- Experience Items -->
+
+            <!-- DATEV -->
+            <div class="timeline-item" data-type="experience">
+                <span class="timeline-date">10/2023 – present</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/HnK7Qhkt/datev-logo.png" alt="DATEV">
+                    <h3>DATEV</h3>
+                    <p>Robotics, Cognition, Intelligence (M.Sc.)<br><i>Focus: ML & DL</i></p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Universidad de Cordoba -->
+            <div class="timeline-item" data-type="experience">
+                <span class="timeline-date">10/2023 – present</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/BQLFq4m7/uni-cordoba-logo.png" alt="Universidad de Cordoba">
+                    <h3>Universidad de Córdoba</h3>
+                    <p>Robotics, Cognition, Intelligence (M.Sc.)<br><i>Focus: ML & DL</i></p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TMOS -->
+            <div class="timeline-item" data-type="experience">
+                <span class="timeline-date">10/2023 – present</span>
+                <div class="timeline-dot"></div>
+                <div class="edu-card expandable">
+                    <img src="https://i.postimg.cc/P5nymJTn/tmos-logo.png" alt="TMOS">
+                    <h3>TMOS</h3>
+                    <p>Robotics, Cognition, Intelligence (M.Sc.)<br><i>Focus: ML & DL</i></p>
+                    <div class="more-info">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder -->
+            <div class="timeline-item" data-type="experience">
+                <span class="timeline-date">Future</span>
+                <div class="timeline-dot placeholder-dot"></div>
+                <div class="edu-card placeholder-card">
+                    <div class="placeholder-icon">+</div>
+                    <h3>Coming Soon</h3>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

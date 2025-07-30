@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -18,9 +18,8 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#education">Professional Journey</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -31,7 +30,6 @@
         <div id="about"></div>
         <div id="education"></div>
         <div id="projects"></div>
-        <div id="experience"></div>
         <div id="awards"></div>
         <div id="contact"></div>
         <div id="footer"></div>
@@ -39,7 +37,7 @@
     </div>
 
     <script src="js/loadSections.js"></script>
-    <!-- AOS Script -->
+    <!-- Timeline Education -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -47,6 +45,38 @@
             once: true
         });
     </script>
+    <!-- Filter Education and Experience -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active class
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Show/hide items
+                timelineItems.forEach(item => {
+                    const type = item.getAttribute('data-type');
+                    item.style.display = (type === filter) ? 'flex' : 'none';
+                });
+            });
+        });
+
+        // ✅ Apply initial filter when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            const initialFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+            timelineItems.forEach(item => {
+                const type = item.getAttribute('data-type');
+                item.style.display = (type === initialFilter) ? 'flex' : 'none';
+            });
+        });
+    </script>
+
+
 
 </body>
 
