@@ -1,210 +1,406 @@
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8f9fb;
-        color: #333;
-        padding: 0;
-    }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marius Graml – ML Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav {
-        background: #fff;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fb;
+            color: #333;
+            padding: 0;
+        }
 
-    nav .logo {
-        font-weight: 700;
-        font-size: 1.2rem;
-    }
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-    }
+        nav .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
 
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
 
-    nav ul li a:hover,
-    nav ul li a.active {
-        color: #fff;
-        background: #007bff;
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
 
-    .container {
-        max-width: 1000px;
-        margin: auto;
-        padding: 2rem;
-    }
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #fff;
+            background: #007bff;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
 
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
+        .container {
+            width: 100%;
+            padding: 2rem 4vw;
+        }
 
-    .intro {
-        max-width: 60%;
-    }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
 
-    .intro h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-    }
+        .intro {
+            max-width: 60%;
+        }
 
-    .intro h1 span {
-        color: #007bff;
-    }
+        .intro h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
 
-    .intro p {
-        margin-top: 1rem;
-        font-size: 1.1rem;
-    }
+        .intro h1 span {
+            color: #007bff;
+        }
 
-    .tags {
-        margin: 1rem 0;
-    }
+        .intro p {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
 
-    .tag {
-        display: inline-block;
-        background-color: #e6e9f0;
-        border-radius: 20px;
-        padding: 0.3rem 1rem;
-        margin-right: 0.5rem;
-        font-size: 0.9rem;
-    }
+        .tags {
+            margin: 1rem 0;
+        }
 
-    .buttons a {
-        text-decoration: none;
-        padding: 0.8rem 1.5rem;
-        margin-right: 1rem;
-        border-radius: 8px;
-        font-weight: 600;
-        display: inline-block;
-    }
+        .tag {
+            display: inline-block;
+            background-color: #e6e9f0;
+            border-radius: 20px;
+            padding: 0.3rem 1rem;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
 
-    .buttons .primary {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
-        color: white;
-    }
+        .buttons a {
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            margin-right: 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+        }
 
-    .buttons .secondary {
-        border: 2px solid #007bff;
-        color: #007bff;
-        background-color: white;
-    }
+        .buttons .primary {
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
+        }
 
-    .profile-img img {
-        border-radius: 50%;
-        width: 180px;
-        height: 180px;
-        object-fit: cover;
-    }
+        .buttons .secondary {
+            border: 2px solid #007bff;
+            color: #007bff;
+            background-color: white;
+        }
 
-    .section {
-        margin-top: 4rem;
-    }
+        .profile-img img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
 
-    .section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        border-bottom: 3px solid #00c6ff;
-        display: inline-block;
-    }
+        .section {
+            margin-top: 4rem;
+        }
 
-    .card {
-        background: white;
-        border-radius: 12px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #00c6ff;
+            display: inline-block;
+        }
 
-    .card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
+        .edu-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .card p {
-        font-size: 0.95rem;
-        color: #555;
-    }
+        .edu-content {
+            flex: 1;
+        }
 
-    .contact-section {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 2rem;
-    }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
 
-    .contact-info,
-    .contact-form {
-        flex: 1;
-        background: #fff;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
+        .edu-header h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            color: #222;
+        }
 
-    .contact-info p {
-        margin: 1rem 0;
-    }
+        .edu-date {
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            margin-left: 1rem;
+        }
 
-    .form-group {
-        margin-bottom: 1rem;
-    }
+        .edu-institution {
+            font-weight: 500;
+            color: #333;
+        }
 
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        font-family: inherit;
-    }
+        .edu-details {
+            font-size: 0.95rem;
+            color: #555;
+        }
 
-    .send-btn {
-        background: linear-gradient(90deg, #007bff, #00c6ff);
-        color: #fff;
-        padding: 0.75rem 2rem;
-        border: none;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        .edu-logo {
+            display: flex;
+            align-items: center;
+            padding-left: 2rem;
+        }
 
-    footer {
-        background: #1e293b;
-        color: #fff;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 4rem;
-        border-top: 1px solid #ccc;
-    }
+        .edu-logo img {
+            height: 100%;
+            max-height: 80px;
+            object-fit: contain;
+        }
+    </style>
+</head>
 
-    footer a {
-        color: #fff;
-        margin: 0 1rem;
-        text-decoration: none;
-    }
-</style>
+<body>
+    <nav>
+        <div class="logo">Marius Graml</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="home">
+        <section class="header">
+            <div class="intro">
+                <h1>Marius <span>Graml</span></h1>
+                <h3>Master Student with focus on Machine Learning and Deep Learning Research</h3>
+                <div class="tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Deep Learning</span>
+                    <span class="tag">TUM</span>
+                </div>
+                <div class="buttons">
+                    <a href="#projects" class="primary">View Projects</a>
+                    <a href="#contact" class="secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="profile-img">
+                <img src="https://i.postimg.cc/rs9Hbnd2/Marius-7-web-optimiert.jpg" alt="Marius Graml">
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>I am a research-driven Master's student in <strong>Robotics, Cognition, Intelligence</strong> at TUM
+                with a strong background in machine learning and signal processing. My academic path spans
+                <strong>Germany, Spain, Australia, and South Korea</strong>—fostering global scientific maturity. I
+                specialize in <strong>Graph Neural Networks</strong> and their application in robotics and optical
+                sensing systems.
+            </p>
+        </section>
+
+        <section class="section" id="education">
+            <h2>Education</h2>
+
+            <div class="card redesigned-card">
+                <div class="card-row">
+                    <div class="card-content">
+                        <div class="card-title-row">
+                            <h3>Technical University of Munich</h3>
+                            <span class="date">📅 10/2023–present</span>
+                        </div>
+                        <p class="institution">Robotics, Cognition, Intelligence (M.Sc.)</p>
+                        <p class="details">Konrad Adenauer Scholarship</p>
+                    </div>
+                    <div class="card-logo">
+                        <img src="https://i.postimg.cc/y8K57vJR/logo-tum.png" alt="TUM Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card redesigned-card">
+                <div class="card-row">
+                    <div class="card-content">
+                        <div class="card-title-row">
+                            <h3>Seoul National University</h3>
+                            <span class="date">📅 03/2025–07/2025</span>
+                        </div>
+                        <p class="details">Exchange Semester</p>
+                    </div>
+                    <div class="card-logo">
+                        <img src="https://i.postimg.cc/G3sSYZGY/snu-logo.png" alt="SNU Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card redesigned-card">
+                <div class="card-row">
+                    <div class="card-content">
+                        <div class="card-title-row">
+                            <h3>Australian National University</h3>
+                            <span class="date">📅 09/2022–08/2023</span>
+                        </div>
+                        <p class="details">Year Abroad</p>
+                        <p class="institution">Bachelor’s Thesis</p>
+                    </div>
+                    <div class="card-logo">
+                        <img src="https://i.postimg.cc/Hk7dvwGS/anu-logo2.png" alt="ANU Logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card redesigned-card">
+                <div class="card-row">
+                    <div class="card-content">
+                        <div class="card-title-row">
+                            <h3>Regensburg University of Applied Sciences</h3>
+                            <span class="date">📅 2018–2022</span>
+                        </div>
+                        <p class="institution">Electrical Engineering and Information Technology (B.Eng.)</p>
+                        <p class="details">DAAD RISE, PROMOS, Josef-Stanglmeier-Prize</p>
+                    </div>
+                    <div class="card-logo">
+                        <img src="https://i.postimg.cc/Rh3DCTLy/oth-logo3.png" alt="OTH Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            <div class="card">
+                <h3>Bee Detection System</h3>
+                <p>YOLOv5 model for real-time bee classification and behavioral analysis in agriculture.</p>
+            </div>
+            <div class="card">
+                <h3>Spectral GNNs Review</h3>
+                <p>Critical analysis and research summary of spectral Graph Neural Networks.</p>
+            </div>
+            <div class="card">
+                <h3>Optical Sensing via Metasurface</h3>
+                <p>Thesis project on innovative spectroscopy for material characterization.</p>
+            </div>
+            <div class="card">
+                <h3>6D CNN for MRI</h3>
+                <p>Ongoing TUM project focusing on equivariance in medical imaging data.</p>
+            </div>
+            <div class="card">
+                <h3>Neural Network in C++</h3>
+                <p>From-scratch neural network implementation using C++ and backpropagation.</p>
+            </div>
+            <div class="card">
+                <h3>Soccer Predictor</h3>
+                <p>Bayesian model for soccer outcome prediction using latent variables.</p>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            <div class="card">
+                <h3>Research Assistant – ANU</h3>
+                <p>09/2022–08/2023 | Python software for optical sensing, interferometer control, research thesis work
+                </p>
+            </div>
+            <div class="card">
+                <h3>Tutor – OTH Regensburg</h3>
+                <p>03/2023–07/2023 | Taught Signal and Systems Theory, created learning materials</p>
+            </div>
+            <div class="card">
+                <h3>Research Assistant – Universidad de Córdoba</h3>
+                <p>09/2021 | Smart City development using FIWARE framework</p>
+            </div>
+            <div class="card">
+                <h3>Working Student – DATEV eG</h3>
+                <p>05/2019–07/2019 | Data warehouse management with Git, SAP BO, and Java</p>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaboration, research opportunities, or just want to connect? I'd love to hear from you.
+            </p>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>Email: marius.graml@tum.de</p>
+                    <p>LinkedIn: <a
+                            href="https://www.linkedin.com/in/marius-graml-a316071bb/">marius-graml-a316071bb</a></p>
+                    <p>GitHub: <a href="https://github.com/Marius-Graml">Marius-Graml</a></p>
+                    <p>Location: Munich, Germany</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="Your message..."></textarea>
+                        </div>
+                        <button class="send-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h3>Marius Graml</h3>
+        <p>Machine Learning Researcher & Engineer</p>
+        <div>
+            <a href="mailto:marius.graml@tum.de">Email</a>
+            <a href="https://www.linkedin.com/in/marius-graml-a316071bb/">LinkedIn</a>
+            <a href="https://github.com/Marius-Graml">GitHub</a>
+        </div>
+        <p>© 2025 Marius Graml. Crafted with passion for research and innovation.</p>
+    </footer>
+</body>
+
+</html>
