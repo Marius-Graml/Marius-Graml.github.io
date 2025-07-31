@@ -4,7 +4,7 @@
 
         <div class="project-card">
             <div class="project-card-header">
-                <h3>Neural Network in C++</h3>
+                <h3>⚙️ Neural Network in C++</h3>
                 <span class="badge completed">Completed</span>
             </div>
             <p>Implemented a modular feedforward neural network in modern C++, featuring backpropagation, activation
@@ -22,25 +22,71 @@
             </div>
             <p>Critical review and summary of spectral Graph Neural Networks and their applications.</p>
             <div class="project-link">
-                <a href="#">Read here →</a>
+                <a href="https://raw.githubusercontent.com/Marius-Graml/spectral-GNNs-review-paper/main/Paper_V1.pdf"
+                    target="_blank" rel="noopener noreferrer">Read
+                    here →</a>
             </div>
         </div>
 
         <div class="project-card">
             <div class="project-card-header">
-                <h3>Equivariant CNN for 6D Diffusion MRI</h3>
+                <h3>🧠 Equivariant CNN for 6D dMRI</h3>
                 <span class="badge ongoing">Ongoing</span>
-                <span class="badge private">Under NDA</span>
+                <span id="nda-badge" class="badge private">Under NDA</span>
             </div>
-            <p></p>
+            <p>Development of a novel 6D convolutional neural network architecture
+                for the analysis of diffusion MRI data at the Chair of Computer Vision and Artificial Intelligence
+                (Prof. Dr. Daniel Cremers), Technical University of Munich</p>
             <div class="project-link">
-                <a href="#">Learn More →</a>
+                <a href="#" onclick="highlightNDABadge(event)">Learn More →</a>
             </div>
         </div>
 
     </div>
 
-    <div class="view-all-projects">
-        <a href="#all-projects" class="secondary">View All Projects</a>
+    <div class="project-grid hidden" id="more-projects">
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>⚽ Macro-level Soccer Predictor</h3>
+                <span class="badge completed">Completed</span>
+            </div>
+            <p>Developed a probabilistic graphical model to predict soccer match outcomes using macro-level features
+                such as team market value, recent form, and squad composition.
+                Focused on interpretability by employing latent variable models instead of black-box methods, aiming to
+                gain insights into the underlying factors influencing match outcomes rather than solely optimizing
+                predictive accuracy.</p>
+            <div class="project-link">
+                <a href="https://raw.githubusercontent.com/Marius-Graml/Soccer_Game_Predictor/main/Project_Report.pdf"
+                    target="_blank" rel="noopener noreferrer">Report →</a>
+            </div>
+            <div class="project-link">
+                <a href="https://github.com/Marius-Graml/Soccer_Game_Predictor" target="_blank">View on GitHub →</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-card-header">
+                <h3>🌌 Michelson Interferometer</h3>
+                <span class="badge completed">Completed</span>
+            </div>
+            <p>Built a control interface for a Michelson Interferometer using Python, enabling automated alignment of
+                interference patterns through real-time optical signal analysis.</p>
+            <div class="project-link">
+                <a href="https://raw.githubusercontent.com/Marius-Graml/Michelson_Interferometer/main/Project_Report/Project_Report.pdf"
+                    target="_blank" rel="noopener noreferrer">Report
+                    →</a>
+            </div>
+            <div class="project-link">
+                <a href="https://github.com/Marius-Graml/Michelson_Interferometer" target="_blank"
+                    rel="noopener noreferrer">View on Github →</a>
+            </div>
+        </div>
+
+        <!-- Weitere Karten möglich -->
     </div>
+
+    <div class="view-more-projects">
+        <a href="#" id="toggle-projects" class="secondary">View More Projects</a>
+    </div>
+
 </section>

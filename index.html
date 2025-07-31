@@ -36,47 +36,13 @@
 
     </div>
 
-    <script src="js/loadSections.js"></script>
-    <!-- Timeline Education -->
+    <!-- Externe Bibliotheken -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true
-        });
-    </script>
-    <!-- Filter Education and Experience -->
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const timelineItems = document.querySelectorAll('.timeline-item');
 
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Toggle active class
-                filterButtons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                // Show/hide items
-                timelineItems.forEach(item => {
-                    const type = item.getAttribute('data-type');
-                    item.style.display = (type === filter) ? 'flex' : 'none';
-                });
-            });
-        });
-
-        // ✅ Apply initial filter when page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            const initialFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-            timelineItems.forEach(item => {
-                const type = item.getAttribute('data-type');
-                item.style.display = (type === initialFilter) ? 'flex' : 'none';
-            });
-        });
-    </script>
-
-
+    <!-- Eigene Skripte -->
+    <script src="js/loadSections.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

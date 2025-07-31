@@ -386,11 +386,6 @@ body {
     color: #007bff;
 }
 
-.view-all-projects {
-    text-align: center;
-    margin-top: 2rem;
-}
-
 .project-card-header {
     display: flex;
     justify-content: space-between;
@@ -673,7 +668,7 @@ body {
     margin-top: 0.75rem;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .card-list {
@@ -709,4 +704,132 @@ body {
 .filter-btn:hover {
     background: #007bff;
     color: white;
+}
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    /* square */
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #fff;
+}
+
+.flip-front {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    background: #f8f9fb;
+    color: #333;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color: #6c757d;
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: #495057;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #6c757d;
+    }
+}
+
+.pulse-once {
+    animation: pulse 0.6s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-toggle {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#more-projects {
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 1000px;
+}
+
+#more-projects.hidden {
+    opacity: 0;
+    max-height: 0;
+}
+
+.view-more-projects {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
