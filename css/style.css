@@ -364,6 +364,25 @@ body {
     height: 100%;
 }
 
+.project-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.project-links a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #0056b3;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 123, 255, 0.15);
@@ -395,6 +414,10 @@ body {
 .project-link {
     margin-top: auto;
     padding-top: 1rem;
+}
+
+.project-grid .project-card {
+    min-height: 200px;
 }
 
 .badge {
@@ -814,8 +837,22 @@ body {
 
 .view-more-projects {
     text-align: center;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.view-more-projects a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.view-more-projects a:hover {
+    color: #0056b3;
 }
 
 .fade-in {
@@ -831,5 +868,36 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header,
+    .contact-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .intro {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: unset;
     }
 }

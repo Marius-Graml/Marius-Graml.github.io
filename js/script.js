@@ -1,7 +1,11 @@
-// init AOS (Animation on Scroll)
+// ========================
+// AOS: Animate on Scroll
+// ========================
 AOS.init({ duration: 800, once: true });
 
+// ========================
 // Timeline Filter
+// ========================
 document.addEventListener("DOMContentLoaded", () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const timelineItems = document.querySelectorAll('.timeline-item');
@@ -27,17 +31,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// NDA Badge Pulse
+// ========================
+// NDA Badge Pulse Animation
+// ========================
 function highlightNDABadge(event) {
     event.preventDefault();
     const ndaBadge = document.getElementById("nda-badge");
     ndaBadge.classList.add("pulse-once");
+
     ndaBadge.addEventListener("animationend", () => {
         ndaBadge.classList.remove("pulse-once");
     }, { once: true });
 }
 
+// ========================
 // Toggle More Projects
+// ========================
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggle-projects");
     const more = document.getElementById("more-projects");
@@ -52,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// EmailJS contact form
+// ========================
+// EmailJS Contact Form
+// ========================
 document.addEventListener("DOMContentLoaded", () => {
     emailjs.init("OKBnAQIL9-FkteU4P");
 
