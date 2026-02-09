@@ -399,6 +399,14 @@ body {
     margin-bottom: 1rem;
 }
 
+.project-context {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
 .project-card a {
     font-weight: 600;
     text-decoration: none;

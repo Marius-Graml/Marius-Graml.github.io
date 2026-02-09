@@ -36,7 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========================
 function highlightNDABadge(event) {
     event.preventDefault();
-    const ndaBadge = document.getElementById("nda-badge");
+    const card = event.target.closest(".project-card");
+    if (!card) return;
+    const ndaBadge = card.querySelector(".nda-badge");
+    if (!ndaBadge) return;
     ndaBadge.classList.add("pulse-once");
 
     ndaBadge.addEventListener("animationend", () => {
