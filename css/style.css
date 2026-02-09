@@ -407,8 +407,19 @@ body {
 
 .project-card-header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 0.4rem 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-card-header h3 {
+    flex: 1 1 100%;
+    margin-bottom: 0;
+}
+
+.project-card-header .badge {
+    flex-shrink: 0;
 }
 
 .project-link {
@@ -608,8 +619,9 @@ body {
 
 .timeline {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 1.5rem;
     padding-top: 2rem;
     margin-top: 1rem;
@@ -618,9 +630,8 @@ body {
 }
 
 .timeline-item {
-    flex: 1;
-    max-width: unset;
-    min-width: 0;
+    flex: 0 1 calc(25% - 1.2rem);
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
