@@ -67,33 +67,50 @@ document.addEventListener("DOMContentLoaded", () => {
 // ========================
 // EmailJS Contact Form
 // ========================
-document.addEventListener("DOMContentLoaded", () => {
-    emailjs.init("OKBnAQIL9-FkteU4P");
-
+function setupContactForm() {
     const form = document.getElementById('contact-form');
     const button = document.getElementById('send-button');
     const status = document.getElementById('form-status');
 
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+    if (!form || form.dataset.emailjsReady === "true") return;
 
-            button.disabled = true;
-            button.textContent = "Sending...";
+    if (!window.emailjs) {
+        console.error("EmailJS library is not loaded.");
+        return;
+    }
 
-            emailjs.sendForm('service_2fssewl', 'template_5zyj87j', this)
-                .then(() => {
-                    status.textContent = "✅ Message sent successfully!";
-                    form.reset();
-                    button.disabled = false;
-                    button.textContent = "Send Message";
-                    setTimeout(() => status.textContent = "", 5000);
-                }, (error) => {
-                    status.textContent = "❌ Failed to send message.";
-                    console.error(error);
-                    button.disabled = false;
-                    button.textContent = "Send Message";
-                });
+    if (!window.emailjsInitialized) {
+        emailjs.init("OKBnAQIL9-FkteU4P");
+        window.emailjsInitialized = true;
+    }
+
+    form.dataset.emailjsReady = "true";
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        emailjs.sendForm('service_2fssewl', 'template_5zyj87j', this)
+            .then(() => {
+                status.textContent = "✅ Message sent successfully!";
+                form.reset();
+                button.disabled = false;
+                button.textContent = "Send Message";
+                setTimeout(() => status.textContent = "", 5000);
+            }, (error) => {
+                status.textContent = "❌ Failed to send message.";
+                console.error(error);
+                button.disabled = false;
+                button.textContent = "Send Message";
         });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", setupContactForm);
+document.addEventListener("sectionLoaded", (event) => {
+    if (event.detail?.id === "contact") {
+        setupContactForm();
     }
 });

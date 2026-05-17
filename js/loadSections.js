@@ -14,6 +14,8 @@
                 if (id === "projects") {
                     setupProjectToggle();
                 }
+
+                document.dispatchEvent(new CustomEvent("sectionLoaded", { detail: { id } }));
             });
     });
 
