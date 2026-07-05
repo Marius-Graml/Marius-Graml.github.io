@@ -100,29 +100,15 @@ nav ul li a.active {
     font-weight: 600;
     display: inline-block;
     transition: all 0.3s ease;
-}
-
-.buttons .primary {
-    background: linear-gradient(90deg, #007bff, #00c6ff);
-    color: white;
-}
-
-.buttons .primary:hover {
-    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-}
-
-.buttons .secondary {
     border: 2px solid #007bff;
     color: #007bff;
     background-color: white;
 }
 
-.buttons .secondary:hover {
+.buttons a:hover {
     background-color: #007bff;
     color: white;
-    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
     transform: translateY(-2px);
 }
 
